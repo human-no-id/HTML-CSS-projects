@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <h1 id="title">Feedback Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <div>
+        <form id="survey-form">
+            <fieldset>
+                <label id="name-label">Name <input type="text" id="name" placeholder="Enter your name" required />
+                </label>
+                <hr>
+                <label id="email-label">Email <input type="email" id="email" placeholder="Enter your email"
+                        required /></label>
+                <hr>
+                <label id="number-label">Age (optional) <input type="number" id="number" min="13" max="120"
+                        placeholder="Age" /></label>
+                <hr>
+                <label>Which option best describes your current employment status?
+                    <select id="dropdown">
+                        <option value="">Select current role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Full time job</option>
+                        <option value="3">Part time job</option>
+                        <option value="4">Other</option>
+                        <option value="5">Unemployed</option>
+                        <option value="6">Prefer not to say</option>
+                    </select>
+                </label>
+                <hr>
+                <label>Would you recommend this site to a friend?
+                    <label><input class="inline" type="radio" name="referral" value="Definitely" /> Definitely</label>
+                    <label><input class="inline" type="radio" name="referral" value="Maybe" /> Maybe</label>
+                    <label><input class="inline" type="radio" name="referral" value="Not sure" /> Not sure</label>
+                </label>
+                <hr>
+                <label>What is your favorite programming language?
+                    <select>
+                        <option value="" name="fav-feature">Select an option</option>
+                        <option value="c" name="fav-feature">C/C++</option>
+                        <option value="Python" name="fav-feature">Python</option>
+                        <option value="Javascript" name="fav-feature">Javascript</option>
+                        <option value="Solidity" name="fav-feature">Plutus</option>
+                        <option value="Plutus" name="fav-feature">Solidity</option>
+                    </select>
+                </label>
+                <hr>
+                <label>Which projects interest you? (Check all that apply)
+                    <label><input class="inline" type="checkbox" value="front-end" /> UI Design</label>
+                    <label><input class="inline" type="checkbox" value="databases" /> Database</label>
+                    <label><input class="inline" type="checkbox" value="data-science" /> Data Science</label>
+                    <label><input class="inline" type="checkbox" value="distributed-ledge" /> Distributed Ledger</label>
+                    <label><input class="inline" type="checkbox" value="games" /> Games</label>
+                    <label><input class="inline" type="checkbox" value="desktop-apps" /> Desktop apps</label>
+                    <label><input class="inline" type="checkbox" value="mobile-apps" /> Moblie apps</label>
+                    <label><input class="inline" type="checkbox" value="web-apps" /> Web apps</label>
+                    <label><input class="inline" type="checkbox" value="blockchain-apps" /> Blockchain apps</label>
+                </label>
+                <hr>
+                <label>Any comments or suggestions?
+                    <textarea name="comments" rows="10" cols="30" placeholder="Enter your comment here..."></textarea>
+                </label>
+            </fieldset>
+            <input type="submit" value="Submit" id="submit" />
+        </form>
+    </div>
+</body>
+
+</html>
