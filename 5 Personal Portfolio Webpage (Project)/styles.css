@@ -88,6 +88,10 @@ nav a {
     transform-origin: bottom left;
 }
 
+section {
+    min-height: 650px;
+}
+
 #welcome-section {
     width: 100vw;
     height: 100vh;
@@ -568,6 +572,9 @@ footer p {
 
 @media only screen and (max-width: 510px) {
     nav {
+        visibility: hidden;
+    }
+    /* nav {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -576,7 +583,7 @@ footer p {
     nav ul {
         display: flex;
         flex-direction: column;
-    }
+    } */
 
     .project-tile {
         width: 110px;
