@@ -7,6 +7,7 @@
     <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/80d363fba8.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -68,121 +69,47 @@
     <section id="projects">
         <h2>These are some of my projects</h2>
         <div class="panel">
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>Survey Form</h4>
+            <div class="selection">
+                <div class="tab_select" id="feros_exe" onclick="getFEROS_card('feros_exe')">
+                    <p>FEROS</p>
                 </div>
-                <img class="project-image" src="./images/feedback_form.png" alt="project image" />
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/HTML-CSS-projects/tree/main/1%20Build%20a%20Survey%20Form%20(Project)" target="_blank">Code</a>
-                    </div>
-                    <div class="view-proj-btns view-project">
-                        <a href="https://idyllic-paletas-47d1f5.netlify.app" target="_blank">Visit</a>
-                    </div>
+                <div class="tab_select" id="find_trades" onclick="getFindTrades_card('find_trades')">
+                    <p>Find Trades</p>
                 </div>
-            </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>Tribute Page</h4>
+                <div class="tab_select" id="simple_trader" onclick="getSimpleTrader_card('simple_trader')">
+                    <p>Simple Trader</p>
                 </div>
-                <img class="project-image" src="./images/tribute_page.png" alt="project image" />
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/HTML-CSS-projects/tree/main/2%20Build%20a%20Tribute%20Page%20(Project)" target="_blank">Code</a>
-                    </div>
-                    <div class="view-proj-btns view-project">
-                        <a href="https://glowing-mermaid-8ada81.netlify.app" target="_blank">Visit</a>
-                    </div>
+                <div class="tab_select" id="evm_arbitrage" onclick="getArbMilkomeda_card('evm_arbitrage')">
+                    <p>EVM Arbitrage</p>
                 </div>
-            </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>Technical Documentation</h4>
+                <div class="tab_select" id="survey_form" onclick="getSurveyForm_card('survey_form')">
+                    <p>Survey Form</p>
                 </div>
-                <img class="project-image" src="./images/tech_doc.png" alt="project image" />
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/HTML-CSS-projects/tree/main/3%20Build%20a%20Technical%20Documentation%20Page%20(Project)" target="_blank">Code</a>
-                    </div>
-                    <div class="view-proj-btns view-project">
-                        <a href="https://tranquil-praline-ae2875.netlify.app" target="_blank">Visit</a>
-                    </div>
+                <div class="tab_select" id="tribute_page" onclick="getTributePage_card('tribute_page')">
+                    <p>Tribute Page</p>
+                </div>
+                <div class="tab_select" id="tech_docs" onclick="getTechDoc_card('tech_docs')">
+                    <p>Technical Documentation</p>
+                </div>
+                <div class="tab_select" id="landing_page" onclick="getLandingPage_card('landing_page')">
+                    <p>Landing Page</p>
+                </div>
+                <div class="tab_select" id="my_portfolio" onclick="getPortfolio_card('my_portfolio')">
+                    <p>My Portfolio</p>
                 </div>
             </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>Landing Page</h4>
-                </div>
-                <img class="project-image" src="./images/landing_page.png" alt="project image" />
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/HTML-CSS-projects/tree/main/4%20Product%20Landing%20Page%20(Project)" target="_blank">Code</a>
-                    </div>
-                    <div class="view-proj-btns view-project">
-                        <a href="https://spectacular-torte-c9366e.netlify.app" target="_blank">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>FindTrades</h4>
-                </div>
-                <div class="no-site"> <i class="fa-solid fa-robot"></i>
-                    <p></p>
-                </div>
-                <div>
-                    <div class="view-proj-btns only-code">
-                        <a href="https://github.com/human-no-id/FindTrades" target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>SimpleTrader</h4>
-                </div>
-                <div class="placeholder"><i class="fa-solid fa-robot"></i>
-                    <p></p>
-                </div>
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/SimpleTrader" target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>ArbMilkomeda</h4>
-                </div>
-                <div class="placeholder">
-                    <i class="fa-solid fa-robot"></i>
-                    <p></p>
-                </div>
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/ArbMilkomeda" target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-tile">
-                <div class="desc">
-                    <h4>FEROS</h4>
-                </div>
-                <img class="project-image" src="https://github.com/human-no-id/FEROS-PC-EXE/blob/main/FEROS.png" alt="project image" />
-                <div>
-                    <div class="view-proj-btns view-code">
-                        <a href="https://github.com/human-no-id/FEROS-PC-EXE" target="_blank">App</a>
-                    </div>
-                </div>
+            <br>
+            <div class="project-card">
+                <script>
+                    getPortfolio_card('feros_exe');
+                </script>
             </div>
         </div>
-        <!-- <a class="show-all-projects" href="#" target="_blank">Show all<i
-                class="fa-solid fa-square-arrow-up-right"></i></a> -->
     </section>
 
     <section id="contact">
         <div class="contact-section-header">
-            <h2>Let's work together...</h2>
+            <h2>Let's work together</h2>
         </div>
         <div class="contact-links">
             <a class="btn" id="profile-link" href="https://github.com/human-no-id" target="_blank"><i
