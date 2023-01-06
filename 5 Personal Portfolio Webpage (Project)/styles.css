@@ -325,9 +325,10 @@ section {
     column-gap: 1rem;
     row-gap: 1rem;
     padding: 0 2rem;
+    width: 1000px;
 }
 
-.show-all-projects {
+/* .show-all-projects {
     background-color: var(--gray);
     text-decoration: none;
     color: var(--white);
@@ -348,7 +349,7 @@ section {
 
 .show-all-projects:hover i {
     transform: translate(10%, -10%);
-}
+} */
 
 .project-tile {
     width: 170px;
@@ -564,9 +565,9 @@ footer p {
         font-size: small;
     }
 
-    .show-all-projects {
+    /* .show-all-projects {
         font-size: 1.1rem;
-    }
+    } */
 
 }
 
@@ -605,9 +606,9 @@ footer p {
         top: 50%;
     }
 
-    .show-all-projects {
+    /* .show-all-projects {
         font-size: 1rem;
-    }
+    } */
 
     .contact-section-header,
     .contact-links a {
