@@ -86,6 +86,13 @@ function deselectTabs() {
   }
 }
 
+function selectTabs(tag_text) {
+  deselectTabs();
+  const selection_tag = document.getElementById(tag_text);
+  selection_tag.className = "tab_select active_tag";
+  selection_tag.scrollIntoView();
+}
+
 function getSurveyForm_card(tag_text) {
   getProjectCards(
     (card_title = "Survey Form"),
@@ -100,9 +107,7 @@ function getSurveyForm_card(tag_text) {
     (demo_path = "https://idyllic-paletas-47d1f5.netlify.app")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getTributePage_card(tag_text) {
@@ -119,9 +124,7 @@ function getTributePage_card(tag_text) {
     (demo_path = "https://glowing-mermaid-8ada81.netlify.app")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getTechDoc_card(tag_text) {
@@ -138,9 +141,7 @@ function getTechDoc_card(tag_text) {
     (demo_path = "https://tranquil-praline-ae2875.netlify.app")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getLandingPage_card(tag_text) {
@@ -157,9 +158,7 @@ function getLandingPage_card(tag_text) {
     (demo_path = "https://spectacular-torte-c9366e.netlify.app")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getFindTrades_card(tag_text) {
@@ -175,9 +174,7 @@ function getFindTrades_card(tag_text) {
     (demo_path = "")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getSimpleTrader_card(tag_text) {
@@ -193,9 +190,7 @@ function getSimpleTrader_card(tag_text) {
     (demo_path = "")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getArbMilkomeda_card(tag_text) {
@@ -211,9 +206,7 @@ function getArbMilkomeda_card(tag_text) {
     (demo_path = "")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getFEROS_card(tag_text) {
@@ -229,9 +222,7 @@ function getFEROS_card(tag_text) {
     (demo_path = "")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
 
 function getPortfolio_card(tag_text) {
@@ -248,7 +239,5 @@ function getPortfolio_card(tag_text) {
     (demo_path = "")
   );
 
-  deselectTabs();
-  const selection_tag = document.getElementById(tag_text);
-  selection_tag.className = "tab_select active_tag";
+  selectTabs(tag_text);
 }
