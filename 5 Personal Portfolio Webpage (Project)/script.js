@@ -168,7 +168,7 @@ function getFindTrades_card(tag_text) {
     (img_path = ""),
     (img_avail = false),
     (desc_text =
-      "A python project designed to interact with an EVM blockchain and search a pair of DEXes an arbitrage trade that might be worth considering."),
+      "A python project designed to interact with an EVM blockchain and search a pair of DEXes for an arbitrage trade that might be worth considering."),
     (lang_frame_text = "Python"),
     (demo_avail = false),
     (github_path = "https://github.com/human-no-id/FindTrades"),
@@ -240,7 +240,7 @@ function getPortfolio_card(tag_text) {
     (img_path = "./images/portfolio_page.png"),
     (img_avail = true),
     (desc_text =
-      "This project is the page that you are currently on, and it has been designed to showcase some of my projects with demos and links to code on GitHub."),
+      "This is a project designed to showcase some of my projects with demos and links to code on GitHub."),
     (lang_frame_text = "HTML - CSS - JavaScript"),
     (demo_avail = false),
     (github_path =
