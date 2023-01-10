@@ -312,7 +312,7 @@ section {
     justify-content: center;
     row-gap: 2rem;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 6rem);
 }
 
 #projects h2 {

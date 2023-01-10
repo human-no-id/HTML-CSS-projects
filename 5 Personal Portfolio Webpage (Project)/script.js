@@ -8,6 +8,13 @@ function getProjectCards(
   github_path,
   demo_path
 ) {
+  try {
+    const place_holder_details = document.getElementById(
+      "place_holder_details"
+    );
+    place_holder_details.remove();
+  } catch (err) {}
+
   // get project card element in case it is needed when constructing new divs
   const project_card = document.getElementsByClassName("project-card")[0];
 
