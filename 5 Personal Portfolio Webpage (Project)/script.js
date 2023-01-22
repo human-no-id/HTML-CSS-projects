@@ -248,3 +248,19 @@ function getPortfolio_card(tag_text) {
 
   selectTabs(tag_text);
 }
+
+function getContentAI_card(tag_text) {
+  getProjectCards(
+    (card_title = "ContentAI"),
+    (img_path = ""),
+    (img_avail = false),
+    (desc_text =
+      "This is a project that uses AI to generate structured and well-cited articles about a specified topic."),
+    (lang_frame_text = "Python - AI"),
+    (demo_avail = false),
+    (github_path = "https://github.com/human-no-id/ContentAI"),
+    (demo_path = "")
+  );
+
+  selectTabs(tag_text);
+}
