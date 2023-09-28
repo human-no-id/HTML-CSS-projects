@@ -1,10 +1,8 @@
 function getProjectCards(
   card_title,
   img_path,
-  img_avail,
   desc_text,
   lang_frame_text,
-  demo_avail,
   github_path,
   demo_path
 ) {
@@ -22,7 +20,7 @@ function getProjectCards(
   let img_tab;
 
   // check to see if entry has img avil flagged as true or false
-  if (img_avail) {
+  if (img_path) {
     img_tab = `<img src="${img_path}" alt="project image"/>`;
   } else {
     img_tab = `<div class="no-img"><i class="fa-solid fa-robot"></i></div>`;
@@ -48,30 +46,60 @@ function getProjectCards(
   const desc = `<p class="desc">${desc_text}</p>`;
   const lang_frame = `<p class="lang-frame">${lang_frame_text}</p>`;
 
+  //   prepare button class tags
+  let github_class_tag;
+  let demo_class_tag;
+  if (github_path && demo_path) {
+    github_class_tag = "view-code";
+    demo_class_tag = "view-demo";
+  } else {
+    github_class_tag = "only-code";
+    demo_class_tag = "only-code";
+  }
+
   //   initialise html text for btns
-  let card_btns;
+  let card_btns = `<div class="view-proj-btns">`;
 
   //   prepare buttons
-  if (demo_avail) {
-    card_btns = `
-    <div class="view-proj-btns">
-        <div class="view-code" data-location="${github_path}">
-            <a href="${github_path}" target="_blank">Code</a>
-        </div>
-        <div class="view-demo">
-            <a href="${demo_path}" target="_blank">Demo</a>
-        </div>
-    </div>
-    `;
-  } else {
-    card_btns = `
-    <div class="view-proj-btns">
-        <div class="only-code" data-location="${github_path}">
-            <a href="${github_path}" target="_blank">Code</a>
-        </div>
-    </div>
-    `;
+  if (github_path) {
+    card_btns =
+      card_btns +
+      `<div class="${github_class_tag}" data-location="${github_path}">
+        <a href="${github_path}" target="_blank">Code</a>
+      </div>`;
   }
+
+  if (demo_path) {
+    card_btns =
+      card_btns +
+      `<div class="${demo_class_tag}">
+        <a href="${demo_path}" target="_blank">Demo</a>
+      </div>`;
+  }
+
+  card_btns = card_btns + `</div>`;
+
+  // //   prepare buttons
+  // if (demo_avail) {
+  //   card_btns = `
+  //   <div class="view-proj-btns">
+  //       <div class="view-code" data-location="${github_path}">
+  //           <a href="${github_path}" target="_blank">Code</a>
+  //       </div>
+  //       <div class="view-demo">
+  //           <a href="${demo_path}" target="_blank">Demo</a>
+  //       </div>
+  //   </div>
+  //   `;
+  // } else {
+  //   card_btns = `
+  //   <div class="view-proj-btns">
+  //       <div class="only-code" data-location="${github_path}">
+  //           <a href="${github_path}" target="_blank">Code</a>
+  //       </div>
+  //   </div>
+  //   `;
+  // }
   // merge strings for the card-content class element
   const card_content_html = desc + lang_frame + card_btns;
 
@@ -100,83 +128,13 @@ function selectTabs(tag_text) {
   selection_tag.scrollIntoView();
 }
 
-function getSurveyForm_card(tag_text) {
-  getProjectCards(
-    (card_title = "Survey Form"),
-    (img_path = "./images/feedback_form.png"),
-    (img_avail = true),
-    (desc_text =
-      "This is a webpage built for the Build a Survey Form project in the freeCodeCamp Learn HTML and CSS course."),
-    (lang_frame_text = "HTML - CSS"),
-    (demo_avail = true),
-    (github_path =
-      "https://github.com/human-no-id/HTML-CSS-projects/tree/main/1%20Build%20a%20Survey%20Form%20(Project)"),
-    (demo_path = "https://idyllic-paletas-47d1f5.netlify.app")
-  );
-
-  selectTabs(tag_text);
-}
-
-function getTributePage_card(tag_text) {
-  getProjectCards(
-    (card_title = "Tribute Page"),
-    (img_path = "./images/tribute_page.png"),
-    (img_avail = true),
-    (desc_text =
-      "This is a webpage built for the Build a Tribute Page project in the freeCodeCamp Learn HTML and CSS course."),
-    (lang_frame_text = "HTML - CSS"),
-    (demo_avail = true),
-    (github_path =
-      "https://github.com/human-no-id/HTML-CSS-projects/tree/main/2%20Build%20a%20Tribute%20Page%20(Project)"),
-    (demo_path = "https://glowing-mermaid-8ada81.netlify.app")
-  );
-
-  selectTabs(tag_text);
-}
-
-function getTechDoc_card(tag_text) {
-  getProjectCards(
-    (card_title = "Technical Documentation"),
-    (img_path = "./images/tech_doc.png"),
-    (img_avail = true),
-    (desc_text =
-      "This is a webpage built for the Build a Technical Documentation Page project in the freeCodeCamp Learn HTML and CSS course."),
-    (lang_frame_text = "HTML - CSS"),
-    (demo_avail = true),
-    (github_path =
-      "https://github.com/human-no-id/HTML-CSS-projects/tree/main/3%20Build%20a%20Technical%20Documentation%20Page%20(Project)"),
-    (demo_path = "https://tranquil-praline-ae2875.netlify.app")
-  );
-
-  selectTabs(tag_text);
-}
-
-function getLandingPage_card(tag_text) {
-  getProjectCards(
-    (card_title = "Landing Page"),
-    (img_path = "./images/landing_page.png"),
-    (img_avail = true),
-    (desc_text =
-      "This is a webpage built for the Build a Product Landing Page project in the freeCodeCamp Learn HTML and CSS course."),
-    (lang_frame_text = "HTML - CSS"),
-    (demo_avail = true),
-    (github_path =
-      "https://github.com/human-no-id/HTML-CSS-projects/tree/main/4%20Product%20Landing%20Page%20(Project)"),
-    (demo_path = "https://spectacular-torte-c9366e.netlify.app")
-  );
-
-  selectTabs(tag_text);
-}
-
 function getFindTrades_card(tag_text) {
   getProjectCards(
     (card_title = "Find Trades"),
     (img_path = ""),
-    (img_avail = false),
     (desc_text =
       "A python project designed to interact with an EVM blockchain and search a pair of DEXes for an arbitrage trade that might be worth considering."),
     (lang_frame_text = "Python"),
-    (demo_avail = false),
     (github_path = "https://github.com/human-no-id/FindTrades"),
     (demo_path = "")
   );
@@ -188,11 +146,9 @@ function getSimpleTrader_card(tag_text) {
   getProjectCards(
     (card_title = "Simple Trader"),
     (img_path = ""),
-    (img_avail = false),
     (desc_text =
       "A project that uses Brownie in Python to deploy a Solidity smart contract that can execute an arbitrage trade in a single transaction on an EVM blockchain."),
     (lang_frame_text = "Solidity - Python - Brownie"),
-    (demo_avail = false),
     (github_path = "https://github.com/human-no-id/SimpleTrader"),
     (demo_path = "")
   );
@@ -204,11 +160,9 @@ function getArbMilkomeda_card(tag_text) {
   getProjectCards(
     (card_title = "EVM Arbitrage"),
     (img_path = ""),
-    (img_avail = false),
     (desc_text =
       "A project that builds on 'Simple Trader' and 'Find Trades' and uses a smart contract deployed to the Milkomeda EVM blockchain and accompanying Python functions to search for and make arbitrage trades."),
     (lang_frame_text = "Solidity - Python"),
-    (demo_avail = false),
     (github_path = "https://github.com/human-no-id/ArbMilkomeda"),
     (demo_path = "")
   );
@@ -220,11 +174,9 @@ function getFEROS_card(tag_text) {
   getProjectCards(
     (card_title = "FEROS"),
     (img_path = "./images/FEROS.png"),
-    (img_avail = true),
     (desc_text =
-      "A standalone windows application that can be used to conduct power system frequency stability studies."),
-    (lang_frame_text = "Python Executable - Tkinter"),
-    (demo_avail = false),
+      "A windows application that can be used to conduct power system frequency stability studies."),
+    (lang_frame_text = "Python - Tkinter"),
     (github_path = "https://github.com/human-no-id/FEROS-PC-EXE"),
     (demo_path = "")
   );
@@ -236,11 +188,9 @@ function getPortfolio_card(tag_text) {
   getProjectCards(
     (card_title = "My Portfolio"),
     (img_path = "./images/portfolio_page.png"),
-    (img_avail = true),
     (desc_text =
       "This is a project designed to showcase some of my projects with demos and links to code on GitHub."),
     (lang_frame_text = "HTML - CSS - JavaScript"),
-    (demo_avail = false),
     (github_path =
       "https://github.com/human-no-id/HTML-CSS-projects/tree/main/5%20Personal%20Portfolio%20Webpage%20(Project)"),
     (demo_path = "")
@@ -249,17 +199,15 @@ function getPortfolio_card(tag_text) {
   selectTabs(tag_text);
 }
 
-function getContentAI_card(tag_text) {
+function getTHESEUS_card(tag_text) {
   getProjectCards(
-    (card_title = "ContentAI"),
+    (card_title = "THESEUS"),
     (img_path = ""),
-    (img_avail = false),
     (desc_text =
-      "This is a project that uses AI to generate structured and well-cited articles about a specified topic."),
-    (lang_frame_text = "Python - AI"),
-    (demo_avail = false),
-    (github_path = "https://github.com/human-no-id/ContentAI"),
-    (demo_path = "")
+      "This web application is currently in development and utilizes AI to provide consolidated summaries of searched topics."),
+    (lang_frame_text = "Python - OpenAI - Anvil"),
+    (github_path = ""),
+    (demo_path = "https://smcybpmh2uvp6emb.anvil.app/XRQGFCW7PVHUDCAT3BAMHZMM")
   );
 
   selectTabs(tag_text);

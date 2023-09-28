@@ -418,6 +418,7 @@ section {
     overflow-x: auto;
     overflow-y: hidden;
     padding: 1rem;
+    justify-content: center;
 }
 
 .tab_select {
@@ -435,7 +436,7 @@ section {
 }
 
 .tab_select p {
-    padding: 0.2rem 0.5rem;
+    padding: 0.5rem 0.7rem;
 }
 
 .tab_select:hover {
