@@ -205,7 +205,7 @@ function getTHESEUS_card(tag_text) {
     (img_path = ""),
     (desc_text =
       "This web application is currently in development and utilizes AI to provide consolidated summaries of searched topics."),
-    (lang_frame_text = "Python - OpenAI - Anvil"),
+    (lang_frame_text = "Python - JavaScript - Anvil"),
     (github_path = ""),
     (demo_path = "https://smcybpmh2uvp6emb.anvil.app/XRQGFCW7PVHUDCAT3BAMHZMM")
   );
