@@ -204,7 +204,7 @@ function getTHESEUS_card(tag_text) {
     (card_title = "THESEUS"),
     (img_path = ""),
     (desc_text =
-      "This web application utilizes GPT to provide consolidated summaries of searched news topics (work-in-progress)."),
+      "This web application utilises GPT to provide consolidated summaries of searched news topics (work-in-progress)."),
     (lang_frame_text = "Python - JavaScript - OpenAI - Anvil"),
     (github_path = ""),
     (demo_path = "https://smcybpmh2uvp6emb.anvil.app/XRQGFCW7PVHUDCAT3BAMHZMM")
